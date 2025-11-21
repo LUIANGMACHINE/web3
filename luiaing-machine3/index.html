@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUIANG MACHINE - 专业工业设备供应商</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <div id="header-container"></div>
+
+    <!-- 搜索框 -->
+    <div class="search-bar">
+        <input type="text" placeholder="搜索产品...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- 社交链接 -->
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- 首页横幅 -->
+    <section class="banner">
+        <div class="banner-slider">
+            <div class="slide active">
+                <img src="images/banner1.jpg" alt="工业泵和流量计">
+                <div class="banner-content">
+                    <h2>高品质工业泵和流量计</h2>
+                    <p>提供可靠耐用的工业解决方案</p>
+                    <a href="products.html" class="btn">查看产品</a>
+                </div>
+            </div>
+            <!-- 其他轮播项 -->
+        </div>
+    </section>
+
+    <!-- 产品轮播 -->
+    <section class="product-carousel">
+        <div class="container">
+            <h2 class="section-title">热门产品</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- 产品轮播项将通过JS动态加载 -->
+                </div>
+                <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- LC流量计展示 -->
+    <section class="flowmeter-section">
+        <div class="container">
+            <div class="flowmeter-content">
+                <div class="flowmeter-image">
+                    <img src="images/lc-flowmeter.jpg" alt="LC流量计">
+                </div>
+                <div class="flowmeter-info">
+                    <h2>LC流量计</h2>
+                    <p class="delivery-notice">交期延长: 由于全球供应链问题，当前产品交付时间可能延长至30-45天</p>
+                    <p>LC系列流量计采用先进技术，提供精确的流量测量，适用于各种工业应用场景。</p>
+                    <a href="product-details.html?id=lc-flowmeter" class="btn">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <div id="footer-container"></div>
+
+    <!-- 购物车 -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>购物车</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- 购物车项将通过JS动态加载 -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>总计:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <button class="request-quotation-btn">请求报价</button>
+        </div>
+    </div>
+
+    <script src="js/language-system.js"></script>
+    <script src="js/social-links.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 加载头部和页脚
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+            
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
